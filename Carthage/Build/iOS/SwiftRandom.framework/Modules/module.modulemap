@@ -1,0 +1,10 @@
+framework module SwiftRandom {
+  umbrella header "SwiftRandom.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftRandom.Swift {
+    header "SwiftRandom-Swift.h"
+}

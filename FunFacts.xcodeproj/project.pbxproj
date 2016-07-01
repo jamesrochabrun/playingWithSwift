@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3DF1741D262A410034A5ED /* SwiftRandom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3DF1731D262A410034A5ED /* SwiftRandom.framework */; };
 		7B95E7911D2448CB0022213E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95E7901D2448CB0022213E /* AppDelegate.swift */; };
 		7B95E7931D2448CB0022213E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95E7921D2448CB0022213E /* ViewController.swift */; };
 		7B95E7961D2448CB0022213E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B95E7941D2448CB0022213E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B3DF1731D262A410034A5ED /* SwiftRandom.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftRandom.framework; path = Carthage/Build/iOS/SwiftRandom.framework; sourceTree = "<group>"; };
 		7B95E78D1D2448CB0022213E /* FunFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B95E7901D2448CB0022213E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B95E7921D2448CB0022213E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3DF1741D262A410034A5ED /* SwiftRandom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 		7B95E7841D2448CB0022213E = {
 			isa = PBXGroup;
 			children = (
+				7B3DF1731D262A410034A5ED /* SwiftRandom.framework */,
 				7B95E78F1D2448CB0022213E /* FunFacts */,
 				7B95E78E1D2448CB0022213E /* Products */,
 			);
@@ -80,6 +84,7 @@
 				7B95E7891D2448CB0022213E /* Sources */,
 				7B95E78A1D2448CB0022213E /* Frameworks */,
 				7B95E78B1D2448CB0022213E /* Resources */,
+				7B3DF1751D262A610034A5ED /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -135,6 +140,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B3DF1751D262A610034A5ED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftRandom.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B95E7891D2448CB0022213E /* Sources */ = {
@@ -259,6 +281,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FunFacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.speedelo.FunFacts;
@@ -270,6 +296,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FunFacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.speedelo.FunFacts;
@@ -296,6 +326,7 @@
 				7B95E7A11D2448CB0022213E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

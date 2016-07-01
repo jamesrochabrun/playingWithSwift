@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftRandom
 
 class ViewController: UIViewController {
 
@@ -26,7 +27,10 @@ class ViewController: UIViewController {
     @IBAction func showFunFact() {
        
         //creating an instance of ColorModel and calling dircetly the getRandomColor method
-        let randomColor = ColorModel().getRandomColor()
+        //let randomColor = ColorModel().getRandomColor()
+        
+        //using SwiftRandomLibrary
+        let randomColor = Randoms.randomColor()
         self.view.backgroundColor = randomColor
         self.funFactButton.tintColor = randomColor
         self.factLabel.text = self.factModel.getRandomFact()
